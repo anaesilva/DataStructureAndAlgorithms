@@ -1,8 +1,8 @@
-package com.datastructure.vetor;
+package com.datastructure.arrays;
 
 public class testEx01 {
     public static void main(String[] args) {
-       Vetor vetor = new Vetor(5);
+       Arrays vetor = new Arrays(5);
 
        vetor.addElement("element 1");
        vetor.addElement("element 2");

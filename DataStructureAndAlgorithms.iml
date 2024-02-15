@@ -16,6 +16,15 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library" scope="PROVIDED">
+      <library>
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
   <component name="SonarLintModuleSettings">
     <option name="uniqueId" value="408ba635-9e93-496d-92c8-b94c2f69affb" />
