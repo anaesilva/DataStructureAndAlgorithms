@@ -9,11 +9,11 @@ import lombok.Setter;
 public class Arrays {
 
     private String[] elements;
-    private int lengthNotNull;
+    private int lengthWithoutNullElements;
 
     public Arrays(int capacity) {
         this.elements = new String[capacity];
-        this.lengthNotNull = 0;
+        this.lengthWithoutNullElements = 0;
     }
 
     public void addElement(String element) {
@@ -26,41 +26,42 @@ public class Arrays {
     }
 
     public void addElementV2(String element) throws Exception {
-        if (this.lengthNotNull < this.elements.length) {
-           this.elements[this.lengthNotNull] = element;
-           this.lengthNotNull++;
+        if (this.lengthWithoutNullElements < this.elements.length) {
+           this.elements[this.lengthWithoutNullElements] = element;
+           this.lengthWithoutNullElements++;
         } else {
             throw new Exception("Vetor já está cheio, não é possível adicionar mais elementos");
         }
     }
 
     public boolean addElementV3(String element) {
-        if (this.lengthNotNull < this.elements.length){
-            this.elements[this.lengthNotNull] = element;
-            this.lengthNotNull++;
+        if (this.lengthWithoutNullElements < this.elements.length){
+            this.elements[this.lengthWithoutNullElements] = element;
+            this.lengthWithoutNullElements++;
             return true;
         }
         return false;
     }
 
-    public boolean addElement(int position, String element) {
-        if (!(position >= 0 && position < lengthNotNull)) {
+    public boolean addElementV4(int position, String element) {
+        if (!(position >= 0 && position < lengthWithoutNullElements)) {
             throw new IllegalArgumentException("Posição inválida");
         }
+
 
         
         return false;
     }
 
     public String find(int position) {
-        if (!(position >= 0 && position < lengthNotNull)) {
+        if (!(position >= 0 && position < lengthWithoutNullElements)) {
             throw new IllegalArgumentException("Posição inválida");
         }
         return this.elements[position];
     }
 
     public int findV2(String element) {
-      for (int i = 0; i < this.lengthNotNull; i++) {
+      for (int i = 0; i < this.lengthWithoutNullElements; i++) {
           if (this.elements[i].equals(element)) {
               return i;
           }
@@ -69,7 +70,7 @@ public class Arrays {
     }
 
     public int lengthResult() {
-        return this.lengthNotNull;
+        return this.lengthWithoutNullElements;
     }
 
     @Override
@@ -78,13 +79,13 @@ public class Arrays {
         StringBuilder s = new StringBuilder();
         s.append("[");
 
-        for (int i = 0; i<this.lengthNotNull -1; i++){
+        for (int i = 0; i<this.lengthWithoutNullElements -1; i++){
             s.append(this.elements[i]);
             s.append(", ");
         }
 
-        if (this.lengthNotNull >0){
-            s.append(this.elements[this.lengthNotNull -1]);
+        if (this.lengthWithoutNullElements >0){
+            s.append(this.elements[this.lengthWithoutNullElements -1]);
         }
 
         s.append("]");
