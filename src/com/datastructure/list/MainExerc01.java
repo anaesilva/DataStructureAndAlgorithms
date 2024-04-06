@@ -1,14 +1,23 @@
 package com.datastructure.list;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class MainExerc01 {
     public static void main(String[] args) {
-        exerc01 test = new exerc01();
+        Exerc01 test = new Exerc01();
         test.numeros();
 
-        exerc01 test2 = new exerc01();
+        Exerc01 test2 = new Exerc01();
         test2.nomes();
 
-        exerc01 test3 = new exerc01();
+        Exerc01 test3 = new Exerc01();
         test3.numerosPares();
+
+        List<Integer> lista = Arrays.asList(5000, 2, 4, 100000, 3, 20000);
+
+        Exerc01 test4 = new Exerc01();
+        test4.soma(lista);
+
     }
 }

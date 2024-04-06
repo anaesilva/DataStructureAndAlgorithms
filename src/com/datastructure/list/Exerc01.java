@@ -11,7 +11,7 @@ import java.util.Scanner;
 // Escreva um programa que some todos os números em uma lista e imprima o resultado.
 // Escreva um programa que encontre o maior número em uma lista e o imprima.
 // Escreva um programa que verifique se um elemento específico está presente em uma lista.
-public class exerc01 {
+public class Exerc01 {
 
     public void numeros() {
         List<Integer> ls = new ArrayList<>();
@@ -64,17 +64,6 @@ public class exerc01 {
         System.out.print("A soma desses números é: ");
         System.out.println(soma);
 
-        int maior = 0;
-        System.out.print("O maior número da lista é: ");
-        for(int i = 0; i < 20; i++) {
-            for(int j = 0; j < 20; j++) {
-                if (i > j) {
-                    maior = i;
-                }
-            }
-        }
-        System.out.println(maior);
-
         List<Integer> lsPares = new ArrayList<>();
 
         System.out.print("Dessa lista os números pares são: ");
@@ -84,6 +73,18 @@ public class exerc01 {
             }
         }
         System.out.println(lsPares);
+    }
+
+    public int soma(List<Integer> lista) {
+        int maior = lista.getFirst();
+
+        for(int i = 0; i < lista.size(); i++) {
+            if (lista.get(i) > maior) {
+                maior = lista.get(i);
+            }
+        }
+        System.out.print("O maior número da lista é: " + maior);
+       return maior;
     }
 
 }
