@@ -17,7 +17,7 @@ public class PalindromeNumber {
           }
         }
 
-      System.out.println("out " + output);
+      System.out.println("output: " + output);
         return output;
     }
 }

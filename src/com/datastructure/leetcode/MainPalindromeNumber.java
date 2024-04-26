@@ -4,6 +4,6 @@ public class MainPalindromeNumber {
     public static void main(String[] args) {
         PalindromeNumber palindromeNumber = new PalindromeNumber();
 
-        palindromeNumber.isPalindrome(121);
+        palindromeNumber.isPalindrome(323);
     }
 }
