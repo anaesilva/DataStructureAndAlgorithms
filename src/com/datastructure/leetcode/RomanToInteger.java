@@ -19,17 +19,21 @@ public class RomanToInteger {
 
         for (int i = 0; i < s.length(); i++) {
 
-            if (s.charAt(i) == 'I'  && (s.charAt(i + 1) == 'V' || s.charAt(i + 1) == 'X')) {
-                output += (number.get(s.charAt(i + 1)) - number.get(s.charAt(i)));
-                i++;
-            } else if (s.charAt(i) == 'X'  && (s.charAt(i + 1) == 'L' || s.charAt(i + 1) == 'C')) {
-                output += (number.get(s.charAt(i + 1)) - number.get(s.charAt(i)));
-                i++;
-            } else if (s.charAt(i) == 'C'  && (s.charAt(i + 1) == 'D' || s.charAt(i + 1) == 'M')) {
-                output += (number.get(s.charAt(i + 1)) - number.get(s.charAt(i)));
-                i++;
+            if (i + 1 < s.length()) {
+                if (s.charAt(i) == 'I'  && (s.charAt(i + 1) == 'V' || s.charAt(i + 1) == 'X')) {
+                    output += (number.get(s.charAt(i + 1)) - number.get(s.charAt(i)));
+                    i++;
+                } else if (s.charAt(i) == 'X'  && (s.charAt(i + 1) == 'L' || s.charAt(i + 1) == 'C')) {
+                    output += (number.get(s.charAt(i + 1)) - number.get(s.charAt(i)));
+                    i++;
+                } else if (s.charAt(i) == 'C'  && (s.charAt(i + 1) == 'D' || s.charAt(i + 1) == 'M')) {
+                    output += (number.get(s.charAt(i + 1)) - number.get(s.charAt(i)));
+                    i++;
+                } else {
+                    output+=number.get(s.charAt(i));
+                }
             } else {
-                output+=number.get(s.charAt(i));
+                output += number.get(s.charAt(i));
             }
         }
 
