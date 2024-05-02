@@ -17,29 +17,23 @@ public class RomanToInteger {
         number.put('D', 500);
         number.put('M', 1000);
 
-        char[] convertToChar = s.toCharArray();
+        for (int i = 0; i < s.length(); i++) {
 
-        for (int i = 0; i < convertToChar.length - 1; i++) {
-
-            if (number.containsKey(convertToChar[i])) {
-                output += number.get(convertToChar[i]);
-                System.out.println(number.get(convertToChar[i]));
-            } else if (convertToChar[i] == 'I' && (convertToChar[i + 1] == 'V' || convertToChar[i + 1] == 'X')) {
-                output += number.get(convertToChar[i + 1]) - number.get(convertToChar[i]);
-                System.out.println("Output 1: " + (number.get(convertToChar[i + 1]) - number.get(convertToChar[i])));
-            } else if (convertToChar[i] == 'X' && (convertToChar[i + 1] == 'L' || convertToChar[i + 1] == 'C')) {
-                output += number.get(convertToChar[i + 1]) - number.get(convertToChar[i]);
-                System.out.println("Output 1: " + (number.get(convertToChar[i + 1]) - number.get(convertToChar[i])));
-
-            } else if (convertToChar[i] == 'C' && (convertToChar[i + 1] == 'D' || convertToChar[i + 1] == 'M')) {
-                output += number.get(convertToChar[i + 1]) - number.get(convertToChar[i]);
-                System.out.println("Output 1: " + (number.get(convertToChar[i + 1]) - number.get(convertToChar[i])));
-
+            if (s.charAt(i) == 'I'  && (s.charAt(i + 1) == 'V' || s.charAt(i + 1) == 'X')) {
+                output += (number.get(s.charAt(i + 1)) - number.get(s.charAt(i)));
+                i++;
+            } else if (s.charAt(i) == 'X'  && (s.charAt(i + 1) == 'L' || s.charAt(i + 1) == 'C')) {
+                output += (number.get(s.charAt(i + 1)) - number.get(s.charAt(i)));
+                i++;
+            } else if (s.charAt(i) == 'C'  && (s.charAt(i + 1) == 'D' || s.charAt(i + 1) == 'M')) {
+                output += (number.get(s.charAt(i + 1)) - number.get(s.charAt(i)));
+                i++;
+            } else {
+                output+=number.get(s.charAt(i));
             }
-
-
-            System.out.println("Output: " + output);
         }
+
+        System.out.println("output: " + output);
         return output;
     }
 }
