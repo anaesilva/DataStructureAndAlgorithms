@@ -1,4 +1,4 @@
-package com.datastructure.arrays;
+package com.datastructure.arrays.lorraine;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -18,7 +18,6 @@ public class RomanToInteger {
         number.put('M', 1000);
 
         for (int i = 0; i < s.length(); i++) {
-
             if (i + 1 < s.length()) {
                 if (s.charAt(i) == 'I'  && (s.charAt(i + 1) == 'V' || s.charAt(i + 1) == 'X')) {
                     output += (number.get(s.charAt(i + 1)) - number.get(s.charAt(i)));
@@ -37,7 +36,7 @@ public class RomanToInteger {
             }
         }
 
-        System.out.println("output: " + output);
+        System.out.println("Output: " + output);
         return output;
     }
 }

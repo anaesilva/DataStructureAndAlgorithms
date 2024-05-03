@@ -1,4 +1,4 @@
-package com.datastructure.arrays;
+package com.datastructure.arrays.lorraine;
 
 public class testEx04 {
     public static void main(String[] args) {
