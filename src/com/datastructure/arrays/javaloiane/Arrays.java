@@ -1,4 +1,4 @@
-package com.datastructure.arrays.java2;
+package com.datastructure.arrays.javaloiane;
 
 import lombok.Getter;
 import lombok.Setter;

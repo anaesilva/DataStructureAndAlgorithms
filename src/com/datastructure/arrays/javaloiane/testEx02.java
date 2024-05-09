@@ -1,4 +1,4 @@
-package com.datastructure.arrays.java2;
+package com.datastructure.arrays.javaloiane;
 
 public class testEx02 {
     public static void main(String[] args) {

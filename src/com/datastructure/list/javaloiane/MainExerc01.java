@@ -1,4 +1,4 @@
-package com.datastructure.list;
+package com.datastructure.list.javaloiane;
 
 import java.util.Arrays;
 import java.util.List;

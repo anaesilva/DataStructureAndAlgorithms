@@ -1,4 +1,4 @@
-package com.datastructure.arrays.java;
+package com.datastructure.arrays.javanelioalves;
 
 import java.util.Scanner;
 
