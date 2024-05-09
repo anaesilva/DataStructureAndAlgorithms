@@ -1,8 +1,8 @@
-package com.datastructure.arrays.javaPoo;
+package com.datastructure.arrays.java;
 
 import java.util.Scanner;
 
-public class NumerosPares {
+public class Negatives {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -14,17 +14,12 @@ public class NumerosPares {
             vet[i] = scanner.nextInt();
         }
 
-        System.out.print("NUMEROS PARES: ");
-        int qdePares = 0;
+        System.out.println("NUMEROS NEGATIVOS: ");
         for (int x : vet) {
-            if(x % 2 == 0) {
-                System.out.print(x + " ");
-                qdePares++;
+            if(x < 0) {
+                System.out.println(x);
             }
         }
-        System.out.println();
-        System.out.println("QUANTIDADE DE PARES = " + qdePares);
-
 
         scanner.close();
     }

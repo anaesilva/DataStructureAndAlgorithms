@@ -1,9 +1,9 @@
-package com.datastructure.arrays.javaPoo;
+package com.datastructure.arrays.java;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-public class MediaPares {
+public class MaiorPosicao {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
 
@@ -17,23 +17,18 @@ public class MediaPares {
             vet[i] = scanner.nextDouble();
         }
 
-        double soma = 0;
-        int qdePares = 0;
 
-        for (double x : vet) {
-            if(x % 2 == 0) {
-                soma+=x;
-                qdePares++;
+        double maior = 0;
+        int posicao = 0;
+        for (int i = 0; i < n; i++) {
+            if(vet[i] > maior) {
+                maior = vet[i];
+                posicao = i;
             }
         }
+        System.out.println("MAIOR VALOR = " + maior);
+        System.out.println("POSICAO DO MAIOR VALOR = " + posicao);
 
-        double media = soma / qdePares;
-
-        if (qdePares == 0) {
-            System.out.println("NENHUM NUMERO PAR");
-        } else {
-            System.out.println("MEDIA DOS PARES = " + media);
-        }
 
         scanner.close();
     }

@@ -1,6 +1,6 @@
-package com.datastructure.arrays.lorraine;
+package com.datastructure.arrays.java2;
 
-public class testEx04 {
+public class testEx03 {
     public static void main(String[] args) {
         Arrays arrays = new Arrays(10);
 
@@ -9,9 +9,7 @@ public class testEx04 {
             arrays.addElementV2("element 2");
             arrays.addElementV2("element 3");
 
-            System.out.println(arrays.lengthResult());
             System.out.println(arrays);
-
         } catch (Exception e) {
             e.printStackTrace();
         }

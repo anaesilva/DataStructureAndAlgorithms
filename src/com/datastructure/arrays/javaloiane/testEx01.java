@@ -1,4 +1,4 @@
-package com.datastructure.arrays.lorraine;
+package com.datastructure.arrays.java2;
 
 public class testEx01 {
     public static void main(String[] args) {

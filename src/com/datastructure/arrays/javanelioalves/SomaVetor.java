@@ -1,12 +1,11 @@
-package com.datastructure.arrays.javaPoo;
+package com.datastructure.arrays.java;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-public class MaiorPosicao {
+public class SomaVetor {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Quantos numeros voce vai digitar?");
@@ -17,18 +16,18 @@ public class MaiorPosicao {
             vet[i] = scanner.nextDouble();
         }
 
+        double soma = 0;
 
-        double maior = 0;
-        int posicao = 0;
-        for (int i = 0; i < n; i++) {
-            if(vet[i] > maior) {
-                maior = vet[i];
-                posicao = i;
-            }
+        System.out.print("Valores = ");
+        for (double x : vet) {
+            System.out.print(x + " ");
+            soma+=x;
         }
-        System.out.println("MAIOR VALOR = " + maior);
-        System.out.println("POSICAO DO MAIOR VALOR = " + posicao);
+        double media = soma / n;
 
+        System.out.println();
+        System.out.println("Soma = " + soma);
+        System.out.println("Média = " + media);
 
         scanner.close();
     }

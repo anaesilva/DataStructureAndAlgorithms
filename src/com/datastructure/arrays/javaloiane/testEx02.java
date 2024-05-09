@@ -1,8 +1,8 @@
-package com.datastructure.arrays.lorraine;
+package com.datastructure.arrays.java2;
 
-public class testEx03 {
+public class testEx02 {
     public static void main(String[] args) {
-        Arrays arrays = new Arrays(10);
+        Arrays arrays = new Arrays(3);
 
         try {
             arrays.addElementV2("element 1");

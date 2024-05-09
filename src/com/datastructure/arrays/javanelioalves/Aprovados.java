@@ -1,6 +1,5 @@
-package com.datastructure.arrays.javaPoo;
+package com.datastructure.arrays.java;
 
-import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
